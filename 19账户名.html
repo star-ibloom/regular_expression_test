@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+			<script>
+				// 账户名只能使用数字字母下划线，且数字不能开头，长度在6-15之间
+				var username =  "dskljfsklf"
+				var reg = /^[a-zA-Z\_]\w{5,14}$/;
+				console.log(reg.test(username))
+			</script>
+	</body>
+</html>

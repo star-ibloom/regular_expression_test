@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<span>规则：第一个1 第二个字358 第三个字除了4 第四个字1-5对应地区</span>
+		<input type="text" id="tex" />
+		<button id="btn">点击查询归属地</button>
+		<script>
+			var tex = document.getElementById("tex");
+			var btn = document.getElementById("btn")
+			btn.onclick = function(){
+				var phonenum = tex.value ;
+				var reg = /^(\+86-)?1[358][012356789](\d{1})\d{7}$/
+				if(!reg.test(phonenum)){
+					alert("格式错误")
+				}else{
+					var city = phonenum.replace(reg,'$2');
+					city = parseInt(city)
+					switch(city){
+						case 1 : alert("哈尔滨");break;
+						case 2 : alert("北京");break;
+						case 3 : alert("天津");break;
+						default :alert("我tm哪知道")
+					}
+				}
+			} 
+		</script>
+	</body>
+</html>

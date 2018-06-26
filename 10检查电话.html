@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+			<script>
+				// 校验普通电话、传真号码：可以“+”开头，除数字外，可含有“-”
+				var num = "+2-131456";
+				var reg = /^(\+)?[0-9|\-]+$/
+				console.log(reg.test(num))
+				
+			</script>
+	</body>
+</html>
